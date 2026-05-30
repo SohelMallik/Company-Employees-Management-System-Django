@@ -13,3 +13,12 @@ def company_list(request):
         }
     ]
     return JsonResponse(data, safe=False)
+
+def company_detail(request, company_id):
+    print(f"Company detail accessed for company_id: {company_id}")
+    data={
+        "Name": "Sohel",
+        "Age": 24,
+        "City": "Nandigram"
+    }
+    return JsonResponse(data)

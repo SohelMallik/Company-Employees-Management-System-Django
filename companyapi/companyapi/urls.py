@@ -22,6 +22,7 @@ from companyapi.views import home_page, company_list
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', home_page),
+    path('companies/', company_list),
     path('companies1/', company_list),
     path('api/v1/', include('api.urls')),
 ]
