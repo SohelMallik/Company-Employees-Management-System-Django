@@ -25,4 +25,5 @@ urlpatterns = [
     path('companies/', company_list),
     path('companies1/', company_list),
     path('api/v1/', include('api.urls')),
+    
 ]
