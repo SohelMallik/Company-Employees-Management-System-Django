@@ -27,7 +27,7 @@ class Employee(models.Model):
     employee_phone= models.CharField(max_length=56)
     employee_address= models.CharField(max_length=56)
     employee_salary= models.FloatField()
-    about=models.textField()
+    about=models.TextField()
     company=models.ForeignKey(Company,on_delete=models.CASCADE)
     Position=models.CharField(max_length=56,choices=(('Manager','Manager'),
                                                      ('Software Engineer','Software Engineer'),
