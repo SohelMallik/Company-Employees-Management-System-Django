@@ -18,3 +18,19 @@ class Company(models.Model):
 
 added_date=models.DateTimeField(auto_now_add=True)
 updated_date=models.DateTimeField(auto_now=True)
+
+#Employee Model
+class Employee(models.Model):
+    employee_id= models.AutoField(primary_key=True)
+    employee_name= models.CharField(max_length=56)
+    employee_email= models.EmailField(max_length=56)
+    employee_phone= models.CharField(max_length=56)
+    employee_address= models.CharField(max_length=56)
+    employee_salary= models.FloatField()
+    about=models.textField()
+    company=models.ForeignKey(Company,on_delete=models.CASCADE)
+    Position=models.CharField(max_length=56,choices=(('Manager','Manager'),
+                                                     ('Software Engineer','Software Engineer'),
+                                                     ('HR','HR'),
+                                                     ('Other','Other')
+                                                     ))
