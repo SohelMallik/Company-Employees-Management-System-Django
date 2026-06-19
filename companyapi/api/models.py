@@ -15,9 +15,10 @@ class Company(models.Model):
                                                   ('Non-IT','Non-IT'),
                                                   ('Manufacturing','Manufacturing'),
                                                   ('Other','Other')))
-
-added_date=models.DateTimeField(auto_now_add=True)
-updated_date=models.DateTimeField(auto_now=True)
+    added_date=models.DateTimeField(auto_now_add=True)
+    updated_date=models.DateTimeField(auto_now=True)
+    def __str__(self):
+        return self.company_name + " - " + self.company_location
 
 #Employee Model
 class Employee(models.Model):

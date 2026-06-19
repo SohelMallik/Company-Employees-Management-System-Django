@@ -12,7 +12,7 @@ class CompanySerializer(serializers.ModelSerializer):
 #Employee Serializer
 class EmployeeSerializer(serializers.ModelSerializer):
 
-    class Meta:
+    class Meta: #Store meta class
         model = Employee
         fields = '__all__'
 
