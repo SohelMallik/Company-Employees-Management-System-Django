@@ -18,10 +18,15 @@ class CompanyViewsset(viewsets.ModelViewSet):
     #companies/{pk}/employees/
     @action(detail=True, methods=['get'])
     def employees(self,request,pk=None):
-        company=Company.objects.get(pk=pk)
-        employees=Employee.objects.filter(company=company)
-        emp_serializer=EmployeeSerializer(employees,many=True,context={'request':request})
-        return Response(emp_serializer.data)
+        try:
+            company=Company.objects.get(pk=pk)
+            employees=Employee.objects.filter(company=company)
+            serializer=EmployeeSerializer(employees,many=True)
+            return Response(serializer.data)
+        except Exception as e:
+            return Response({'error':str(e)},status=400) 
+    
+        
     
 
 # Create Employee Views
