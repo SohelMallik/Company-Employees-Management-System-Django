@@ -11,8 +11,9 @@ class CompanySerializer(serializers.ModelSerializer):
         
 #Employee Serializer
 class EmployeeSerializer(serializers.ModelSerializer):
+    company = serializers.CharField(source='company.__str__', read_only=True)
 
-    class Meta: #Store meta class
+    class Meta:
         model = Employee
         fields = '__all__'
         
