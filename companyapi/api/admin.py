@@ -1,49 +1,48 @@
 from django.contrib import admin
 from .models import Company, Employee
 
-admin.site.register(Company)
-admin.site.register(Employee)
-# @admin.register(Company)
-# class CompanyAdmin(admin.ModelAdmin):
-#     list_display = (
-#         'company_id',
-#         'company_name',
-#         'company_location',
-#         'company_email',
-#         'type',
-#     )
 
-#     list_filter = (
-#         'type',
-#         'company_location',
-#     )
+@admin.register(Company)
+class CompanyAdmin(admin.ModelAdmin):
+    list_display = (
+        'company_id',
+        'company_name',
+        'company_location',
+        'company_email',
+        'type',
+    )
 
-#     search_fields = (
-#         'company_name',
-#         'company_email',
-#         'company_location',
-#     )
+    list_filter = (
+        'type',
+        'company_location',
+    )
+
+    search_fields = (
+        'company_name',
+        'company_email',
+        'company_location',
+    )
 
 
-# @admin.register(Employee)
-# class EmployeeAdmin(admin.ModelAdmin):
-#     list_display = (
-#         'employee_id',
-#         'employee_name',
-#         'employee_email',
-#         'employee_phone',
-#         'employee_salary',
-#         'position',
-#         'company',
-#     )
+@admin.register(Employee)
+class EmployeeAdmin(admin.ModelAdmin):
+    list_display = (
+        'employee_id',
+        'employee_name',
+        'employee_email',
+        'employee_phone',
+        'employee_salary',
+        'position',
+        'company',
+    )
 
-#     list_filter = (
-#         'position',
-#         'company',
-#     )
+    list_filter = (
+        'position',
+        'company',
+    )
 
-#     search_fields = (
-#         'employee_name',
-#         'employee_email',
-#         'employee_phone',
-#     )
+    search_fields = (
+        'employee_name',
+        'employee_email',
+        'employee_phone',
+    )
