@@ -1,7 +1,6 @@
 from django.contrib import admin
 from .models import Company, Employee
 
-
 @admin.register(Company)
 class CompanyAdmin(admin.ModelAdmin):
     list_display = (
@@ -12,17 +11,29 @@ class CompanyAdmin(admin.ModelAdmin):
         'type',
     )
 
-    list_filter = (
-        'type',
-        'company_location',
-    )
+    ordering = ('company_id',)
+    
+# @admin.register(Company)
+# class CompanyAdmin(admin.ModelAdmin):
+#     list_display = (
+#         'company_id',
+#         'company_name',
+#         'company_location',
+#         'company_email',
+#         'type',
+#     )
 
-    search_fields = (
-        'company_name',
-        'company_email',
-        'company_location',
-    )
+#     list_filter = (
+#         'type',
+#         'company_location',
+#     )
 
+#     search_fields = (
+#         'company_name',
+#         'company_email',
+#         'company_location',
+#     )
+#     ordering = ('company_id',)
 
 @admin.register(Employee)
 class EmployeeAdmin(admin.ModelAdmin):
@@ -45,4 +56,5 @@ class EmployeeAdmin(admin.ModelAdmin):
         'employee_name',
         'employee_email',
         'employee_phone',
+        'employee_id',
     )
