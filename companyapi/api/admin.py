@@ -35,6 +35,8 @@ class CompanyAdmin(admin.ModelAdmin):
 #     )
 #     ordering = ('company_id',)
 
+
+
 @admin.register(Employee)
 class EmployeeAdmin(admin.ModelAdmin):
     list_display = (
