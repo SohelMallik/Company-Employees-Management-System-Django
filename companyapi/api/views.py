@@ -33,3 +33,4 @@ class CompanyViewsset(viewsets.ModelViewSet):
 class EmployeeViewset(viewsets.ModelViewSet):
     queryset=Employee.objects.all()
     serializer_class=EmployeeSerializer
+    
