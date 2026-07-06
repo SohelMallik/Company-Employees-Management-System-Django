@@ -1,2 +1,5 @@
-POST https://example.com/comments HTTP/1.1
+GET http://localhost:8000/api/v1/companies/ HTTP/1.1
 content-type: application/json
+Authorization: Api-key lNIkjF8E.3IMezlaaLEaLtxhEpStyt7NcGTjA5Hj3
+
+
