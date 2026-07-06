@@ -9,11 +9,17 @@ from api.serializer import CompanySerializer, EmployeeSerializer
 from rest_framework.decorators import action
 from rest_framework.views import Response
 
+#For Api Key Authentication
+from rest_framework_api_key.permissions import HasAPIKey
+
 
 # Create Company views here.
 class CompanyViewsset(viewsets.ModelViewSet):
     queryset=Company.objects.all()
     serializer_class=CompanySerializer
+    
+    #For Api Key Authentication
+    permission_classes=[HasAPIKey]
     
     #companies/{pk}/employees/
     @action(detail=True, methods=['get'])
@@ -34,3 +40,5 @@ class EmployeeViewset(viewsets.ModelViewSet):
     queryset=Employee.objects.all()
     serializer_class=EmployeeSerializer
     
+     # Protect all Employee APIs
+    permission_classes = [HasAPIKey]
