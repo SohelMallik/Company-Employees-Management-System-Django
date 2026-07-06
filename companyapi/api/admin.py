@@ -1,4 +1,5 @@
-from django.contrib import admin
+
+from django.contrib import admin #maintain the admin interface of the Django application
 from .models import Company, Employee
 
 @admin.register(Company)
