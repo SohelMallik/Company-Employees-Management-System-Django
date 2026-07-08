@@ -262,7 +262,7 @@ Ensure the following are installed:
 ### Clone Repository
 
 ```bash
-git clone https://github.com/your-username/Company-Employees-Management-System-Django.git
+git clone https://github.com/SohelMallik/Company-Employees-Management-System-Django.git
 
 cd Company-Employees-Management-System-Django
 ```
