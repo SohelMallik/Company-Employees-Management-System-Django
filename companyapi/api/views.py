@@ -15,7 +15,7 @@ from rest_framework_api_key.permissions import HasAPIKey
 
 # Create Company views here.
 class CompanyViewsset(viewsets.ModelViewSet):
-    queryset=Company.objects.all()
+    queryset=Company.objects.all() #Fetch all companies from the database
     serializer_class=CompanySerializer
     
     #For Api Key Authentication
@@ -37,7 +37,7 @@ class CompanyViewsset(viewsets.ModelViewSet):
 
 # Create Employee Views
 class EmployeeViewset(viewsets.ModelViewSet):
-    queryset=Employee.objects.all()
+    queryset=Employee.objects.all() #Fetch all employees from the database
     serializer_class=EmployeeSerializer
     
      # Protect all Employee APIs
