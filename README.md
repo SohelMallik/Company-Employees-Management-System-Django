@@ -1,10 +1,35 @@
-# Company Employees Management System (Django)
+# 🚀 Company Employees Management System 
 
-## Overview
+A secure and scalable RESTful API built using **Django**, **Django REST Framework (DRF)**, **MySQL**, and **API Key Authentication** for managing companies and employees.
 
-**Company Employees Management System** is a RESTful web application built using **Django** and **Django REST Framework (DRF)** for managing companies and their employees. The system provides APIs for creating, retrieving, updating, and deleting company and employee records while maintaining relationships between companies and their employees.
+The project provides complete CRUD operations for companies and employees, company-employee relationship management, secure API access using **djangorestframework-api-key**, and JSON-based REST APIs following industry-standard backend development practices.
 
-The project follows Django's MVC (Model-View-Template) architecture and leverages Django REST Framework's ViewSets, Serializers, and Router-based URL configuration to provide a clean and scalable API design.
+![Python](https://img.shields.io/badge/Python-3.13-blue)
+![Django](https://img.shields.io/badge/Django-6.0.5-green)
+![DRF](https://img.shields.io/badge/DRF-3.17.1-red)
+![MySQL](https://img.shields.io/badge/MySQL-Database-orange)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+---
+
+## 📖 Overview
+
+Company Employees Management System API is a secure RESTful web application built using Django, Django REST Framework (DRF), MySQL, and API Key Authentication.
+
+The system provides complete CRUD operations for managing companies and employees while maintaining company-employee relationships through well-structured REST APIs.
+
+### Key Capabilities
+
+- Company Management APIs
+- Employee Management APIs
+- Company–Employee Relationship Management
+- API Key Authentication
+- JSON-Based API Communication
+- Django Admin Integration
+- Serializer-Based Data Validation
+- Exception Handling
+
+The project follows Django's **MVT (Model-View-Template)** architecture and leverages Django REST Framework's **ViewSets**, **Serializers**, **Routers**, and **Permission Classes** to build a clean, scalable, and maintainable backend system.
 
 ---
 
@@ -67,43 +92,158 @@ Response:
 
 ---
 
-## Technology Stack
 
-| Technology            | Purpose              |
-| --------------------- | -------------------- |
-| Python                | Programming Language |
-| Django                | Web Framework        |
+## 🛠 Technology Stack
+
+| Technology | Purpose |
+|------------|----------|
+| Python | Programming Language |
+| Django | Web Framework |
 | Django REST Framework | REST API Development |
-| MYSQL                | Default Database     |
-| Django ORM            | Database Operations  |
+| MySQL | Database |
+| Django ORM | Database Operations |
+| API Key Authentication | API Security |
+| Git | Version Control |
+| GitHub | Source Code Management |
 
 ---
 
-## Project Structure
+## 🔐 API Key Authentication
+
+This project uses:
+
+```bash
+djangorestframework-api-key
+```
+
+to secure all API endpoints.
+
+### Protected APIs
+
+| Endpoint | Authentication |
+|-----------|---------------|
+| `/api/v1/companies/` | API Key Required |
+| `/api/v1/employees/` | API Key Required |
+| `/api/v1/companies/{id}/employees/` | API Key Required |
+
+---
+
+## Create API Key
+
+### Install Package
+
+```bash
+pip install djangorestframework-api-key==3.1.0
+```
+
+### Add to INSTALLED_APPS
+
+```python
+INSTALLED_APPS = [
+    ...
+    "rest_framework",
+    "rest_framework_api_key",
+]
+```
+
+### Apply Migration
+
+```bash
+python manage.py migrate
+```
+
+### Generate API Key
+
+Login to Django Admin:
 
 ```text
-companyapi/
+http://127.0.0.1:8000/admin/
+```
+
+Navigate:
+
+```text
+API Key Management
+→ API Keys
+→ Add API Key
+```
+
+Save the generated API key securely.
+
+---
+
+## Authentication Header
+
+### Default Header
+
+```http
+Authorization: Api-Key YOUR_API_KEY
+```
+
+### Example
+
+```http
+GET /api/v1/companies/
+
+Authorization: Api-Key YOUR_API_KEY
+```
+
+---
+
+## API Security Workflow
+
+```text
+Client
+   │
+   │ API Key
+   ▼
+Django REST Framework
+   │
+   ▼
+HasAPIKey Permission
+   │
+   ├── Valid Key → 200 OK
+   └── Invalid Key → 403 Forbidden
+```
+
+---
+
+## 📂 Project Structure
+
+```text
+Company-Employee-Management-System/
 │
-├── manage.py
-├── db.sqlite3
+├── .github/
 │
-├── api/
-│   ├── admin.py
-│   ├── apps.py
-│   ├── models.py
-│   ├── serializer.py
-│   ├── tests.py
-│   ├── urls.py
-│   ├── views.py
-│   └── migrations/
+├── companyapi/
+│   ├── manage.py
+│   │
+│   ├── api/
+│   │   ├── migrations/
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── models.py
+│   │   ├── serializer.py
+│   │   ├── tests.py
+│   │   ├── urls.py
+│   │   ├── views.py
+│   │   └── __init__.py
+│   │
+│   └── companyapi/
+│       ├── settings.py
+│       ├── urls.py
+│       ├── asgi.py
+│       ├── wsgi.py
+│       └── __init__.py
 │
-└── companyapi/
-    ├── settings.py
-    ├── urls.py
-    ├── views.py
-    ├── asgi.py
-    ├── wsgi.py
-    └── __init__.py
+├── screenshots/
+│
+├── README.md
+├── requirements.txt
+├── LICENSE
+├── CONTRIBUTING.md
+├── CODE_OF_CONDUCT.md
+└── SECURITY.md
 ```
 
 ---
@@ -114,14 +254,15 @@ companyapi/
 
 Ensure the following are installed:
 
-* Python 3.10+
-* pip
-* Git
+- Python 3.10+
+- pip
+- Git
+- MySQL Server
 
 ### Clone Repository
 
 ```bash
-git clone https://github.com/your-username/Company-Employees-Management-System-Django.git
+git clone https://github.com/SohelMallik/Company-Employees-Management-System-Django.git
 
 cd Company-Employees-Management-System-Django
 ```
@@ -153,6 +294,17 @@ Or using requirements file:
 
 ```bash
 pip install -r requirements.txt
+```
+
+---
+
+## 📦 Requirements
+
+```txt
+Django==6.0.5
+djangorestframework==3.17.1
+djangorestframework-api-key==3.1.0
+PyMySQL==1.2.0
 ```
 
 ---
@@ -195,7 +347,22 @@ http://127.0.0.1:8000/admin/
 ```
 
 ---
+## 🗄 Database Configuration
 
+Example MySQL Configuration:
+
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'company',
+        'USER': 'your_username',
+        'PASSWORD': 'your_password',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+}
+```
 ## API Endpoints
 
 ### Companies
@@ -239,13 +406,15 @@ GET /companies/1/employees/
 ---
 
 ## Sample API Usage
+### Create a Company
 
-### Create Company
+```http
+POST /api/v1/companies/
+Content-Type: application/json
+Authorization: Api-Key YOUR_API_KEY
+```
 
 ```json
-POST /companies/
-
-[
     {
         "company_id": 1,
         "company_name": "Star_Shop",
@@ -254,16 +423,18 @@ POST /companies/
         "about": "THis is the bigest Company From Kolkata.",
         "type": "IT"
     }
-]
 ```
 
-### Create Employee
+### Create an Employee
+
+```http
+POST /api/v1/employees/
+Content-Type: application/json
+Authorization: Api-Key YOUR_API_KEY
+```
 
 ```json
-POST /employees/
-
-[
-    {
+{
         "employee_id": 1,
         "employee_name": "Sohel Mallik",
         "employee_email": "sohel@gmail.com",
@@ -274,8 +445,9 @@ POST /employees/
         "position": "HR",
         "company": 2
     }
-]
 ```
+
+---
 
 ---
 
@@ -296,23 +468,21 @@ Common settings:
 * REST Framework Settings
 * Security Settings
 
-Example database configuration:
 
-```python
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'company',
-        'USER': 'sohel',
-        'PASSWORD': '2005',
-        'HOST': 'localhost',
-        'PORT': '3306',
-    }
-}
-```
 
 ---
+
+## HTTP Status Codes
+
+| Code | Description |
+|------|-------------|
+| 200 | OK |
+| 201 | Created |
+| 400 | Bad Request |
+| 401 | Unauthorized |
+| 403 | Forbidden |
+| 404 | Not Found |
+| 500 | Internal Server Error |
 
 ## Testing
 
@@ -390,12 +560,24 @@ You are free to use, modify, and distribute this project under the terms of the 
 
 ---
 
-## Author
+## 👨‍💻 Author
 
-**Sohel Mallik**
+### Sohel Mallik
 
-B.Tech Computer Science & Engineering
-Backend Developer | Django Developer | Software Engineering Enthusiast
+B.Tech Computer Science & Engineering  
+Brainware University
+
+Backend Developer | Django Developer | REST API Developer
+
+### Skills
+
+- Python
+- Django
+- Django REST Framework
+- MySQL
+- API Key Authentication
+- Git & GitHub
+- Data Structures & Algorithms
 
 GitHub:
 https://github.com/SohelMallik
