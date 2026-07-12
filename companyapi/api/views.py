@@ -19,7 +19,7 @@ class CompanyViewsset(viewsets.ModelViewSet):
     serializer_class=CompanySerializer
     
     #For Api Key Authentication
-    permission_classes=[HasAPIKey]
+    # permission_classes=[HasAPIKey]
     
     #companies/{pk}/employees/
     @action(detail=True, methods=['get'])
@@ -41,4 +41,4 @@ class EmployeeViewset(viewsets.ModelViewSet):
     serializer_class=EmployeeSerializer
     
      # Protect all Employee APIs
-    permission_classes = [HasAPIKey]
+    # permission_classes = [HasAPIKey]
