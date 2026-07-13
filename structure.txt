@@ -1,52 +1,52 @@
-Company-Employees-Management-System-Django
+Companyapi
 |
-¦   api.http
-¦   db.sqlite3
-¦   manage.py
-¦
+Â¦   api.http
+Â¦   db.sqlite3
+Â¦   manage.py
+Â¦
 +---api
-¦   ¦   admin.py
-¦   ¦   apps.py
-¦   ¦   models.py
-¦   ¦   serializer.py
-¦   ¦   tests.py
-¦   ¦   urls.py
-¦   ¦   views.py
-¦   ¦   __init__.py
-¦   ¦
-¦   +---migrations
-¦   ¦   ¦   0001_initial.py
-¦   ¦   ¦   0002_employee.py
-¦   ¦   ¦   0003_rename_position_employee_position.py
-¦   ¦   ¦   0004_alter_employee_company_and_more.py
-¦   ¦   ¦   0005_alter_employee_company_and_more.py
-¦   ¦   ¦   __init__.py
-¦   ¦   ¦
-¦   ¦   +---__pycache__
-¦   ¦           0001_initial.cpython-313.pyc
-¦   ¦           0002_employee.cpython-313.pyc
-¦   ¦           0003_rename_position_employee_position.cpython-313.pyc
-¦   ¦           0004_alter_employee_company_and_more.cpython-313.pyc
-¦   ¦           0005_alter_employee_company_and_more.cpython-313.pyc
-¦   ¦           __init__.cpython-313.pyc
-¦   ¦
-¦   +---__pycache__
-¦           admin.cpython-313.pyc
-¦           apps.cpython-313.pyc
-¦           models.cpython-313.pyc
-¦           serializer.cpython-313.pyc
-¦           urls.cpython-313.pyc
-¦           views.cpython-313.pyc
-¦           __init__.cpython-313.pyc
-¦
+Â¦   Â¦   admin.py
+Â¦   Â¦   apps.py
+Â¦   Â¦   models.py
+Â¦   Â¦   serializer.py
+Â¦   Â¦   tests.py
+Â¦   Â¦   urls.py
+Â¦   Â¦   views.py
+Â¦   Â¦   __init__.py
+Â¦   Â¦
+Â¦   +---migrations
+Â¦   Â¦   Â¦   0001_initial.py
+Â¦   Â¦   Â¦   0002_employee.py
+Â¦   Â¦   Â¦   0003_rename_position_employee_position.py
+Â¦   Â¦   Â¦   0004_alter_employee_company_and_more.py
+Â¦   Â¦   Â¦   0005_alter_employee_company_and_more.py
+Â¦   Â¦   Â¦   __init__.py
+Â¦   Â¦   Â¦
+Â¦   Â¦   +---__pycache__
+Â¦   Â¦           0001_initial.cpython-313.pyc
+Â¦   Â¦           0002_employee.cpython-313.pyc
+Â¦   Â¦           0003_rename_position_employee_position.cpython-313.pyc
+Â¦   Â¦           0004_alter_employee_company_and_more.cpython-313.pyc
+Â¦   Â¦           0005_alter_employee_company_and_more.cpython-313.pyc
+Â¦   Â¦           __init__.cpython-313.pyc
+Â¦   Â¦
+Â¦   +---__pycache__
+Â¦           admin.cpython-313.pyc
+Â¦           apps.cpython-313.pyc
+Â¦           models.cpython-313.pyc
+Â¦           serializer.cpython-313.pyc
+Â¦           urls.cpython-313.pyc
+Â¦           views.cpython-313.pyc
+Â¦           __init__.cpython-313.pyc
+Â¦
 +---companyapi
-    ¦   asgi.py
-    ¦   settings.py
-    ¦   urls.py
-    ¦   views.py
-    ¦   wsgi.py
-    ¦   __init__.py
-    ¦
+    Â¦   asgi.py
+    Â¦   settings.py
+    Â¦   urls.py
+    Â¦   views.py
+    Â¦   wsgi.py
+    Â¦   __init__.py
+    Â¦
     +---__pycache__
             settings.cpython-313.pyc
             urls.cpython-313.pyc
