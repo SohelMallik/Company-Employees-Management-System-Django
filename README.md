@@ -1,4 +1,4 @@
-# 🚀 Company Employees Management Api System 
+# 🚀 Company Employees Management System Api
 
 A secure and scalable RESTful API built using **Django**, **Django REST Framework (DRF)**, **MySQL**, and **API Key Authentication** for managing companies and employees.
 
