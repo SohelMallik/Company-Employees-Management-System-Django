@@ -1,0 +1,55 @@
+Companyapi
+|
+¦   api.http
+¦   db.sqlite3
+¦   manage.py
+¦
++---api
+¦   ¦   admin.py
+¦   ¦   apps.py
+¦   ¦   models.py
+¦   ¦   serializer.py
+¦   ¦   tests.py
+¦   ¦   urls.py
+¦   ¦   views.py
+¦   ¦   __init__.py
+¦   ¦
+¦   +---migrations
+¦   ¦   ¦   0001_initial.py
+¦   ¦   ¦   0002_employee.py
+¦   ¦   ¦   0003_rename_position_employee_position.py
+¦   ¦   ¦   0004_alter_employee_company_and_more.py
+¦   ¦   ¦   0005_alter_employee_company_and_more.py
+¦   ¦   ¦   __init__.py
+¦   ¦   ¦
+¦   ¦   +---__pycache__
+¦   ¦           0001_initial.cpython-313.pyc
+¦   ¦           0002_employee.cpython-313.pyc
+¦   ¦           0003_rename_position_employee_position.cpython-313.pyc
+¦   ¦           0004_alter_employee_company_and_more.cpython-313.pyc
+¦   ¦           0005_alter_employee_company_and_more.cpython-313.pyc
+¦   ¦           __init__.cpython-313.pyc
+¦   ¦
+¦   +---__pycache__
+¦           admin.cpython-313.pyc
+¦           apps.cpython-313.pyc
+¦           models.cpython-313.pyc
+¦           serializer.cpython-313.pyc
+¦           urls.cpython-313.pyc
+¦           views.cpython-313.pyc
+¦           __init__.cpython-313.pyc
+¦
++---companyapi
+    ¦   asgi.py
+    ¦   settings.py
+    ¦   urls.py
+    ¦   views.py
+    ¦   wsgi.py
+    ¦   __init__.py
+    ¦
+    +---__pycache__
+            settings.cpython-313.pyc
+            urls.cpython-313.pyc
+            views.cpython-313.pyc
+            wsgi.cpython-313.pyc
+            __init__.cpython-313.pyc
