@@ -41,4 +41,4 @@ class EmployeeViewset(viewsets.ModelViewSet):
     serializer_class=EmployeeSerializer
     
      # Protect all Employee APIs
-    permission_classes = [HasAPIKey]
+    #permission_classes = [HasAPIKey]
